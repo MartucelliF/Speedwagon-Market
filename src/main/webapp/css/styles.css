@@ -1,0 +1,367 @@
+@font-face{
+    font-family: fuenteNav;
+    src: url(../fonts/fuenteNav.ttf);
+}
+@font-face{
+    font-family: fuenteHeader;
+    src: url(../fonts/fuenteNav.ttf);
+}
+
+@font-face{
+    font-family: fuenteoferta;
+    src: url(../fonts/fuenteoferta.ttf);
+}
+
+@font-face{
+    font-family: fuenteproducto;
+    src: url(../fonts/fuenteproducto.otf);
+}
+
+.fuente{
+font-family: fuenteHeader;
+font-size: 30px;
+color: rgb(255, 255, 255);
+margin-top: -50px;
+margin-top: 1px;
+}.fuente .lolete{
+    font-family: fuenteHeader;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+    margin-top: -50px;
+    margin-bottom: -100px;
+}
+
+.fuente h1{
+    margin-top: 1px;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    position: relative;
+    min-height: 100vh;
+    zoom: 100%;
+}
+header{
+    background-color: #040A35;
+    color: white;
+    padding: 10px;
+    border: solid 1px white;
+    height: 250px;
+    
+}header .fuente .searchDiv{
+    text-align: center;
+    position: relative;
+    top: 1em;
+    left: 50%; /* truquito para centrar objetos con position relative PARTE 1 */
+    transform: translateX(-50%);
+}.search{
+    width: 550px;
+    height: 55px;
+    border-radius: 50px;
+}.contSpeedwagon{
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden; /*Recorta-Esconde lo que sobra*/
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }.tpose-image{
+    object-fit: cover; /*Rellena el contenedor con la imagen*/
+    /*Una vez la imagen está dentro del círculo, se asegura que no sobresalga nada, definiendo que rellene 100% del círculo*/
+    width: 100%;
+    height: 100%;
+  }
+
+nav{
+    background-color: #1f4068;
+    color: white;
+    padding: 10px;
+    height: 50px;
+    position: relative;
+    justify-content: space-between;
+}
+    nav a{
+        font-family: fuenteNav;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    nav ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5em;
+        width: 17.8em;
+        padding-left: 1px;
+        position: relative;
+        top: -40%;
+        left: 50%; /* truquito para centrar objetos con position relative PARTE 1 */
+        transform: translateX(-50%);
+    }nav ul li{
+            display: flex;
+            position: relative;
+            margin: -0.2em -2em;
+            padding: 10px;
+        }
+
+/* grilla esque -------------------------------------------- */
+.esque{
+    background-color: rgb(218, 218, 218);
+    padding: 10px;
+    height: 100em;
+    position: relative;
+}
+
+/* estrella de calificación de los productos ---------------- */
+
+.bx-star{
+    font-size: 35px;
+    position: absolute;
+    right: 1.5em;
+    top: 0.3em;
+    color: violet;
+}
+
+/* --------------------------------------------------------- */
+
+/* grilla productos ---------------------------------------- */
+
+.grillaproductos{
+    display: grid;
+    position: absolute;
+    left: 47%;
+    height: 100em;
+    width: 71em;
+    padding-bottom: -10em;
+    grid-template-columns: 10% 10% 10%;
+    grid-template-rows: 13% 13% 20%;
+    gap: 10em;
+    top: 3em;
+    left: 50%; /* truquito para centrar objetos con position relative PARTE 1 */
+    transform: translateX(-50%);
+    }
+
+    .grillaproductos .product-frame{
+        margin-top: 1em;
+        margin-left: 7em;
+        border-radius: 10px;
+        border: black 9px solid;
+        width: 15em;
+        height: 15em;
+        background-color: white;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        color: white;
+        border-image-slice: 1;
+        position: relative;
+    }.grillaproductos .product-frame img{
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        top: 0;
+    }.grillaproductos .product-frame h2{
+        padding: 15px;
+    }
+
+        .grillaproductos .product-frame{
+            position: relative;
+        }.grillaproductos .product-frame .product-caract{
+            display: flex;
+            position: absolute;
+            height: 25%;
+            width: 101.5%;
+            bottom: -0.5em;
+            left: -0.1em;
+            color: white;
+            background-color: #040A35;
+            border: 10px;
+        }.grillaproductos .product-frame .product-caract .product-price{
+            margin-top: 0.5em;
+            margin-bottom: -0.1em;
+            height: 40px;
+            position: absolute;
+            font-size: 165%;
+            left: 2%;
+            top: -1%;
+
+        }.grillaproductos .product-frame .product-caract .product-calif{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            font-size: 165%;
+            right: 2%;
+            top: -20%;
+        }
+
+        .productoname{
+            font-family: fuenteproducto;
+            text-align: center;
+            font-size: 17px;
+            position: absolute;
+            top: 30px;
+            color: black;
+        }
+
+/* grilla ofertas--------------------------------------- */
+
+/* rgb en los textos a la izquierda--------------------- */
+
+.ofertatitulo1{
+    font-family: fuenteoferta;
+    font-size: 12.5px;
+    font-weight: bold;
+    position: absolute;
+    top: -8em;
+    left: 2em;
+    animation: cambiaColor 3s linear infinite alternate; /* Animación para cambiar el color */
+}
+
+@keyframes cambiaColor {
+    0% {
+        color: rgb(0, 255, 242); /* Color inicial */
+    }
+    25% {
+        color: rgb(0, 113, 128); /* Cambio a verde */
+    }
+    50% {
+        color: blue; /* Cambio a azul */
+    }
+    75% {
+        color: rgb(10, 17, 114); /* Cambio a amarillo */
+    }
+    100% {
+        color: rgb(0, 255, 242); /* Regresa al color inicial */
+    }
+}
+
+/* ----------------------------------------------------- */
+
+/* rgb en los textos a la derecha---------------------- */
+
+.ofertatitulo2{
+    font-family: fuenteoferta;
+    font-size: 12.5px;
+    font-weight: bold;
+    position: absolute;
+    top: -6.5em;
+    left: 3em;
+    animation: cambiaColor 3s linear infinite alternate; /* Animación para cambiar el color */
+}
+/* --------------------------------------------- */
+
+.contenedor1{
+    color: black;
+    position: absolute;
+    width: 21.5em;
+    height: 90.5em;
+    top: 7em;
+    left: 3em;
+    }
+
+    .contenedor1 .grillaofertas{
+        display: grid;
+        height: 25em;
+        grid-template-rows: 490px;
+        gap: 10px;
+        }
+        
+        .contenedor1 .grillaofertas .oferta{
+            background: linear-gradient(to right, #ffa826, #aa4400);
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            width: 81%;
+            height: 65%;
+            padding: 20px;
+         }.contenedor1 .grillaofertas .oferta img{
+            border: solid 1px white;
+            border-radius: 10px;
+            width: 100%;
+            height: 50%;
+
+         }
+
+.contenedor2{
+    color: black;
+    position: absolute;
+    width: 30em;
+    height: 100em;
+    top: 7em;
+    right: -0.2em;
+    bottom: -5.7em;
+    }
+
+    .contenedor2 .grillaofertas2{
+        display: grid;
+        grid-template-rows: 490px;
+        grid-template-columns: 450px;
+        gap: 1px;
+        }
+
+        .contenedor2 .grillaofertas2 .oferta{
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            width: 89%;
+            height: 83.5%;
+            padding: 20px;
+            text-align: center;
+        }.contenedor2 .grillaofertas2 .oferta img{
+            width: 100%;
+            height: 50%;
+         }
+            
+/* -------------------------------------------------- */
+
+/* iconos del navbar -------------------------------- */
+
+.bx-menu{
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    top: 15%;
+}     
+.bx-search{
+    height: 50px;
+    width: 25px;
+    font-size: 50px;
+    position: relative ;
+    left: 5px;
+    top: 5px;
+}
+.bx-cog{
+    position: relative;
+    top: 19px;
+    font-size: 55px;
+    left: 2px;
+}
+.bx-cart{
+    font-size: 50px;
+    position: absolute;
+    right: 0.3%;
+    top: 15%;
+}
+
+/* ------------------------------------------------ */
+
+/* marco que cubre todo el borde la página------ */
+
+.marco{
+    /*border: solid 80px #040A35;*/
+    border: 80px solid #040A35;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    width: 108.5em; 
+    margin: 0 auto;
+}
+
+footer{
+    background-color: #1f4068;
+    padding: 2em;
+    color: white;
+    text-align: center;
+    border: solid 1px white;
+    /* border: 10px solid; */
+}
+
+/* ---------------------------------------------- */
+
