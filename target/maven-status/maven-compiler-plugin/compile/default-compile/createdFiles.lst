@@ -1,0 +1,10 @@
+persistencia\UsuarioJpaController.class
+com\iniciosesion\iniciosesion\Sevlets\SvUsuarios.class
+logica\Usuario.class
+persistencia\exceptions\NonexistentEntityException.class
+persistencia\exceptions\PreexistingEntityException.class
+persistencia\ControladoraPersistencia.class
+persistencia\exceptions\IllegalOrphanException.class
+logica\Controladora.class
+com\fundacionspeedwagon\fundacionspeedwagon\Sevlets\SvUsuario.class
+logica\Usuario_.class
