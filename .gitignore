@@ -1,3 +1,4 @@
 
 *.war
 *.war
+/.git-rewrite/t/target/
