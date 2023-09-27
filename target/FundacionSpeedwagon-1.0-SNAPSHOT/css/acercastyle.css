@@ -1,0 +1,509 @@
+@font-face{
+    font-family: fuenteNav;
+    src: url(../fonts/fuenteNav.ttf);
+} 
+@font-face{
+    font-family: fuenteHeader;
+    src: url(../fonts/fuenteNav.ttf);
+}
+ 
+@font-face{
+    font-family: fuenteoferta;
+    src: url(../fonts/fuenteoferta.ttf);
+} 
+ 
+@font-face{
+    font-family: fuenteproducto;
+    src: url(../fonts/fuenteproducto.otf);
+}
+
+
+/*el maldito responsive--------------------------*/
+
+@media screen and (max-width: 1200px) {
+    
+    .search{
+        position: relative;
+        max-width: 400px;
+        max-height: 40px;
+        top: 50px;
+    }
+
+    body .headersas .contfuente .contSpeedwagon{
+        width: 100px;
+        height: 100px;
+        top: -230px;
+    }
+
+    body .headersas{
+        height: 10em;
+        position: relative;
+    }
+
+    body .headersas .lolete0{
+        position: relative; 
+        font-size: 50px;
+    }
+
+    body .headersas .lolete{
+        position: relative;
+        font-size: 50px;
+        top: -30px;
+    }
+
+    .headersas .contfuente .searchDiv /* PONE SIEMPRE LA PROCEDENCIA XQ SI PONES EL searchDiv SOLO NO FUNCA*/
+    {
+    top: -5.3em;    
+    }
+
+    body .navmain ul{ /* PONE SIEMPRE LA PROCEDENCIA XQ SI NO PONES EL BODY O LO QUE SEA PROCEDENTE HAY VECES QUE NO FUNCA*/
+        left: 51%;
+    }
+
+
+    .navmain .menu{
+        font-size: 23px;
+        top: 17%;
+        cursor: pointer;
+    }
+
+    body .contbody .hamburguesa{
+        display: none;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    body .contbody .hamburguesa.visible{
+        width: 42%;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, .5);
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .search{
+        position: relative;
+        max-width: 50%;
+        max-height: 30px;
+        top: 4.9em;
+    }
+
+    body .navmain .navbar{
+        width: 50%;
+        top: -22px;
+    } 
+
+    body .headersas .lolete0{
+        font-size: 40px;
+        top: 20%;
+    }
+
+    body .headersas .lolete{
+        font-size: 40px;
+        top: -20px;
+    }
+
+    body .headersas .contfuente .contSpeedwagon{
+        width: 100px;
+        height: 100px;
+        top: -190px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    body .headersas{
+        height: 9em;
+        position: relative;
+    }
+
+    .search{
+        max-width: 60%;
+        top: 135px;
+    }
+
+    body .headersas .lolete0{
+        font-size: 30px;
+        top: 20%;
+    }
+
+    body .headersas .lolete{
+        font-size: 30px;
+        top: -20px;
+    }
+
+    body .headersas .contfuente .contSpeedwagon{
+        width: 70px;
+        height: 70px;
+        top: -140px;
+    }
+
+    body .navmain .navbar{
+        width: 50%;
+        font-size: 15px;
+        top: -9px;
+    } 
+
+    body .navmain .menu{
+        font-size: 15px;
+        top: 16px;
+    } 
+
+    body .contbody .hamburguesa{
+        font-size: 15px;
+    }
+
+    body .contbody .hamburguesa.visible{
+        width: 35%;
+    }
+
+    body .contbody .hamburguesa .flechita img{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    body .headersas .lolete0{
+        font-size: 25px;
+    }
+
+    body .headersas .lolete{
+        font-size: 30px;
+    }
+
+    body .navmain .navbar{
+        font-size: 10px;
+        top: -4px;
+    } 
+    
+    body .navmain .bx-cart{
+      font-size: 25px;
+      top: 20px;
+    }
+
+    body .navmain .menu{
+        font-size: 10px;
+        top: 16px;
+    } 
+
+    body .contbody .hamburguesa{
+        font-size: 15px;
+    }
+
+    body .contbody .hamburguesa.visible{
+        width: 35%;
+    }
+
+    body .contbody .hamburguesa .flechita img{
+        display: none;
+    }
+
+}
+     
+/*-----------------------------------------------*/
+
+
+/*body (xd)--------------------------------------*/
+
+body{
+    font-family: Arial, sans-serif;
+    background-image: url('../img/fondonav.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*-----------------------------------------------*/
+
+
+/* marco que cubre todo el borde la página------ */
+
+.marco{
+    /*border: solid 80px #040A35;*/
+    position: relative;
+    border: 40px solid #040A35;
+}
+
+/* ---------------------------------------------- */
+
+
+/*.headersas xd----------------------------------------*/
+
+.headersas{
+    background-color: #040A35;
+    color: white;
+    padding: 10px;
+    border: solid 1px white;
+    height: 15em;
+    max-height: 30em;
+}
+
+/*-------------------------------------------------*/
+
+
+/*contenedor dentro del .headersas-------------------*/
+
+.contfuente{
+    font-family: fuenteHeader;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    }.contfuente .lolete{
+        position: relative;
+        font-family: fuenteHeader;
+        font-size: 60px;
+        color: rgb(255, 255, 255);
+        top: -40px;
+
+}    
+    
+/*-----------------------------------------------*/
+
+
+/* T pose e inicio de sesión-------------------- */
+
+.contSpeedwagon{
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden; /*Recorta-Esconde lo que sobra*/
+    position: relative;
+    top: -280px;
+    left: 99%; /* truquito para centrar objetos con position relative PARTE 1 */
+    transform: translateX(-100%);
+}
+
+.tpose-image{
+    object-fit: cover; /*Rellena el contenedor con la imagen*/
+    /*Una vez la imagen está dentro del círculo, se asegura que no sobresalga nada, definiendo que rellene 100% del círculo*/
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------------------------------------- */
+
+
+/*barra de busqueda---------------------------*/
+
+.searchDiv{
+    text-align: center;
+    position: relative;
+    top: -4.7em;
+    left: 50%; /* truquito para centrar objetos con position relative PARTE 1 */
+    transform: translateX(-50%);
+}
+
+.search{
+    font-size: 22px;
+    width: 550px;
+    height: 55px;
+    border-radius: 50px;
+
+}
+
+/*--------------------------------------------- */
+
+
+/*navbar----------------------------------------*/
+
+.navmain{
+    background-color: #1f4068;
+    color: white;
+    padding: 10px;
+    height: 50px;
+    position: relative;
+    justify-content: space-between;
+}
+    .navmain a{
+        font-family: fuenteNav;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    .navmain ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5em;
+        width: 14em; /* en "em" en vez de porcentajes para que no se ajuste */
+        padding-left: 1px;
+        position: relative;
+        top: -40%;
+        left: 50%; /* truquito para centrar objetos con position relative PARTE 1 */
+        transform: translateX(-50%);
+    }.navmain ul li{
+            display: flex;
+            position: relative;
+
+            padding: 10px;
+        }
+
+/*----------------------------------------------*/
+
+
+/* iconos del navbar */
+
+.bx-search{
+    height: 50px;
+    width: 25px;
+    font-size: 50px;
+    position: relative ;
+    left: 5px;
+    top: 5px;
+}
+.bx-cog{
+    position: relative;
+    top: 19px;
+    font-size: 55px;
+    left: 2px;
+}
+.bx-cart{
+    font-size: 50px;
+    position: absolute;
+    right: 0.3%;
+    top: 15%;
+}
+
+/* ------------------------------------------------ */
+
+
+/* menu de productos---------------------------------- */
+
+.menu{
+    padding: 10px;
+    border: 0;
+    background-color: transparent;
+    font-family: fuenteNav;
+    font-size: 2.5em;
+    position: absolute;
+    left: 0;
+    top: 5%;
+    animation: cambiaColor 3s linear infinite alternate; /* Animación para cambiar el color */
+}
+
+
+.hamburguesa{
+    /* border: pink solid 10px; */
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;  
+    flex-direction: column;
+    right: 0;
+    width: 27%;
+    transition: all .5s ease;
+    font-size: 200%;
+    padding: 1%;
+    /* box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, .5); */
+}
+
+
+.separador{
+    height: 100%; 
+    width: 100%;
+}
+
+.hamburguesa p{
+    position: relative;
+    font-family: fuenteNav;
+    color: #1c1c1c;
+}
+
+.hamburguesa li{
+    position: relative;
+    color: #1c1c1c;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.flechita {
+    display: flex; /* Hace que los elementos se muestren en línea */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    }
+
+.contLEYENDIOSO{
+    width: 100%;
+}
+
+.flechita img{
+    width: 100%;
+    margin-top: 10px; 
+    margin-right: 60px;
+}
+
+.flechita img:hover {
+    filter: grayscale(100%); /* Cambia a escala de grises al pasar el mouse */
+}
+
+
+@keyframes cambiaColor {
+    0% {
+        color: rgb(255, 231, 122); /* Color inicial */
+    }
+    25% {
+        color: rgb(255, 224, 88);
+    }
+    50% { 
+        color: rgb(202, 168, 16);
+    }
+    75% {
+        color: rgb(194, 126, 1);
+    }
+    100% {
+        color: rgb(236, 106, 0); /* Regresa al color inicial */
+    }
+}
+
+
+/* ----------------------------------------------------- */
+
+
+/* ofertas del menu-------------------------------- */
+
+.contbody{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Establece un contenedor flexible */
+    flex-direction: row; /* Establece la dirección de los elementos secundarios como fila */
+    /* border: green solid 10px; */
+}
+
+.contofertas {
+    border: #040A35 10px solid;
+    width: 100%;
+    /* border: red solid 10px; */
+    overflow: hidden;
+    z-index: -1;
+}
+
+.contofertas li{
+    padding: 3%;
+    font-size: 30px;
+}
+
+
+/*--------------------------------------------------*/
+
+/* footer xd----------------------------------------*/
+
+footer{
+    background-color: #1f4068;
+    padding: 2em;
+    color: white;
+    text-align: center;
+    border: solid 1px white;
+    margin: 0;
+    /* border: 10px solid; */
+}
+
+/*-------------------------------------------------*/
