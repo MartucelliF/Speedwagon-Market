@@ -16,7 +16,6 @@ public class Usuario implements Serializable {
     private String apellido;
     private String gmail;
     private String codigo;
-
     public Usuario() {
     }
 

@@ -7,6 +7,7 @@ package persistencia;
 import java.util.List;
 import logica.Producto;
 import logica.Usuario;
+import logica.Usuario;
 
 public class ControladoraPersistencia {
     

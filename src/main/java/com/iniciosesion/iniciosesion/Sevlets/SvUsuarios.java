@@ -4,7 +4,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;
@@ -12,6 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -73,54 +76,58 @@ Controladora control = new Controladora ();
             // response.sendRedirect("error.jsp");
         }
         
+        List<Usuario> listaUsuarios = new ArrayList<>();
+        listaUsuarios = control.traerUsuarios();
+    
+        HttpSession misesion = request.getSession();
+        misesion.setAttribute("listaUsuarios", listaUsuarios);
+        
+        response.sendRedirect("mostrarUsuarios.jsp");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
 
+    try {
         String nombreusuario = request.getParameter("nombreusuario");
         String apellido = request.getParameter("apellido");
         String gmail = request.getParameter("gmail");
         String codigo = request.getParameter("codigo");
 
-        try {
-            // Verificar si el correo o nombre de usuario ya existen en la base de datos
-            boolean usuarioExistente = control.existeUsuarioRegistro(nombreusuario, gmail);
-
-            if (usuarioExistente) {
-                // Mostrar un mensaje de error si el correo o nombre de usuario ya existen
-                request.setAttribute("mostrarAlertaError", true);
-                System.out.println("Ya existe un usuario con este correo o nombre de usuario");
-                request.getRequestDispatcher("index.jsp").forward(request, response);
-
-            } else {
-                // Si el usuario no existe, procede con el registro
-                Usuario usu = new Usuario();
-                usu.setNombreusuario(nombreusuario);
-                usu.setApellido(apellido);
-                usu.setGmail(gmail);
-                usu.setCodigo(codigo);
-                control.crearUsuario(usu);
-
-                // Redirigir al usuario a una página de éxito o inicio de sesión
-                request.setAttribute("mostrarAlertaValido", true);
-                System.out.println("¡Bienvenido!");
-                request.getRequestDispatcher("inicio.jsp").forward(request, response);
-            }
-        } catch (SQLException ex) {
-            // Manejar la excepción SQL aquí
-            ex.printStackTrace(); // Imprimir detalles de la excepción para depuración
-            // Puedes redirigir al usuario a una página de error o realizar alguna otra acción apropiada
-            // response.sendRedirect("error.jsp");
+        // Verificar si el correo o nombre de usuario ya existen en la base de datos
+        boolean usuarioExistente = control.existeUsuarioRegistro(nombreusuario, gmail);
+        if (usuarioExistente) {
+            // Mostrar un mensaje de error si el correo o nombre de usuario ya existen
+            request.setAttribute("mostrarAlertaError", true);
+            System.out.println("Ya existe un usuario con este correo o nombre de usuario");
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+            
+        } else {
+            
+            // Si el usuario no existe, procede con el registro
+            Usuario usu = new Usuario();
+            usu.setNombreusuario(nombreusuario);
+            usu.setApellido(apellido);
+            usu.setGmail(gmail);
+            usu.setCodigo(codigo);
+            control.crearUsuario(usu);
+            
+            // Redirigir al usuario a una página de éxito o inicio de sesión
+            request.setAttribute("mostrarAlertaValido", true);
+            System.out.println("¡Bienvenido!");
+            request.getRequestDispatcher("inicio.jsp").forward(request, response);
         }
+        
+        Usuario usu = new Usuario ();
+        usu.setNombreusuario(nombreusuario);
+        usu.setApellido (apellido);
+        usu.setGmail(gmail);
+                
+        control.crearUsuario(usu);
+    } catch (SQLException ex) {
+        Logger.getLogger(SvUsuarios.class.getName()).log(Level.SEVERE, null, ex);
     }
-
-    @Override
-    public String getServletInfo() {
-        return "Short description";
+    
     }
-
 }
-
-

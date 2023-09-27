@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import java.util.List;
 import persistencia.ControladoraPersistencia;
 
@@ -37,8 +38,8 @@ public class Controladora {
         // Establecer la conexión con la base de datos (ajustar la URL, usuario y contraseña)
         String url = "jdbc:mysql://localhost:3306/registrospeedwagon?serverTimezone=UTC";
         String usuarioDB = "jonathan";
-        String contraseñaDB = "1868";
-        conn = DriverManager.getConnection(url, usuarioDB, contraseñaDB);
+        String contrasenaDB = "1868";
+        conn = DriverManager.getConnection(url, usuarioDB, contrasenaDB);
         System.out.println("Conectando a la base de datos...");
         // Consultar la base de datos para verificar si el usuario existe
         String sql = "SELECT COUNT(*) AS existe FROM Usuario WHERE gmail = ? AND codigo = ?";
@@ -72,8 +73,8 @@ public class Controladora {
         // Establecer la conexión con la base de datos (ajustar la URL, usuario y contraseña)
         String url = "jdbc:mysql://localhost:3306/registrospeedwagon?serverTimezone=UTC";
         String usuarioDB = "jonathan";
-        String contraseñaDB = "1868";
-        conn = DriverManager.getConnection(url, usuarioDB, contraseñaDB);
+        String contrasenaDB = "1868";
+        conn = DriverManager.getConnection(url, usuarioDB, contrasenaDB);
         System.out.println("Conectando a la base de datos...");
         // Consultar la base de datos para verificar si el usuario existe
         String sql = "SELECT COUNT(*) AS existe FROM Usuario WHERE nombreusuario = ? OR gmail = ?";

@@ -9,5 +9,5 @@ persistencia\UsuarioJpaController.class
 com\iniciosesion\iniciosesion\Sevlets\SvProductos.class
 persistencia\exceptions\NonexistentEntityException.class
 persistencia\exceptions\PreexistingEntityException.class
-persistencia\ControladoraPersistencia.class
 persistencia\exceptions\IllegalOrphanException.class
+com\fundacionspeedwagon\fundacionspeedwagon\Sevlets\SvUsuario.class
