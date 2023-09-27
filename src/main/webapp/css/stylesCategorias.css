@@ -1,0 +1,125 @@
+@font-face{
+    font-family: fuenteNav;
+    src: url(../fonts/fuenteNav.ttf);
+}
+@font-face{
+    font-family: fuenteHeader;
+    src: url(../fonts/fuenteNav.ttf);
+}
+
+@font-face{
+    font-family: fuenteoferta;
+    src: url(../fonts/fuenteoferta.ttf);
+}
+
+@font-face{
+    font-family: fuenteproducto;
+    src: url(../fonts/fuenteproducto.ttf);
+}
+
+@font-face{
+    font-family: fuenteminecraft;
+    src: url(../fonts/minecraft_font.ttf);
+}
+
+.container h1{
+    font-family: fuenteHeader;
+    border: #040A35 solid 10px;
+    width: 5em;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+body{
+    background-image: url('../img/fondoProductos.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* Opcional: ajusta el tamaño de la imagen para cubrir todo el fondo*/
+}
+
+
+.grillaproductos{
+    display: grid;
+    position: absolute;
+    height: 100em;
+    width: 71em;
+    padding-bottom: -10em;
+    grid-template-columns: 13% 13% 13%;
+    grid-template-rows: 20% 20% 20%;
+    gap: 10em;
+    top: 7em;
+    left: 40%; /* truquito para centrar objetos con position relative PARTE 1 */
+    transform: translateX(-40%);
+    }
+
+    .grillaproductos .product-frame{
+        margin-top: 1em;
+        margin-left: 7em;
+        border: black 15px solid;
+        width: 15em;
+        height: 15em;
+        background-color: white;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        color: rgb(0, 0, 0);
+        border-image-slice: 1;
+        position: relative;
+    }.grillaproductos .product-frame img{
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        top: 0;
+    }.grillaproductos .product-frame h2{
+        padding: 15px;
+    }
+
+        .grillaproductos .product-frame{
+            position: relative;
+        }.grillaproductos .product-frame .product-caract{
+            display: flex;
+            position: absolute;
+            height: 25%;
+            width: 101.5%;
+            bottom: -0.5em;
+            left: -0.1em;
+            color: white;
+            background-color: #040A35;
+            border: 10px;
+        }.grillaproductos .product-frame .product-caract .product-price{
+            font-family: fuenteproducto;
+            margin-bottom: -0.1em;
+            height: 40px;
+            position: absolute;
+            font-size: 165%;
+            left: -1.5%;
+            top: -70%;
+
+        }.grillaproductos .product-frame .product-caract .product-calif{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            font-size: 125%;
+            right: -2%;
+            top: -52%;
+        }
+
+        .productoname{
+            font-family: fuenteminecraft;
+            text-align: center;
+            font-size: 0.8em;
+            position: absolute;
+            top: 110%;
+            left: -5%;
+            color: black;
+            width: 110%;
+            background-image: url('../img/cartelNombre.png');
+            background-repeat: no-repeat;
+            background-size: cover; /* Opcional: ajusta el tamaño de la imagen para cubrir todo el fondo*/
+        }
+
+.bx-star{
+    font-size: 35px;
+    position: absolute;
+    right: 1.5em;
+    top: 0.3em;
+    color: violet;
+}   

@@ -16,7 +16,9 @@
     font-family: fuenteproducto;
     src: url(../fonts/fuenteproducto.otf);
 }
-
+.lolete{
+    border: 2px solid red;
+}
 .fuente{
 font-family: fuenteHeader;
 font-size: 30px;
@@ -30,6 +32,76 @@ margin-top: 1px;
     margin-top: -50px;
     margin-bottom: -100px;
 }
+
+.menu{
+    padding: 10px;
+    border: 0;
+    background-color: transparent;
+    font-family: fuenteNav;
+    font-size: 2.5em;
+    position: absolute;
+    left: 0;
+    top: 5%;
+    animation: cambiaColor 3s linear infinite alternate; /* Animación para cambiar el color */
+    cursor: pointer;
+}
+
+
+.menu{
+    display: block;
+}
+
+.cerrarmenu {
+    display: none;
+    }
+
+.hamburguesa{
+    position: relative;
+    right: 9px;
+    display: none;
+    background-color: #a6abb1;
+    height: 1px; /* por alguna razon, las otras palabras del navbar responden a la altura de esto, asi que, cuanto mas baja sea, menos abajo se van las palabras*/
+    width: 7em;
+}
+
+.hamburguesa a{
+    position: relative;
+    font-family: fuenteNav;
+    color: #1c1c1c;
+    right: -20%;
+    top: 1px;
+}
+
+.hamburguesa ul{
+    position: relative;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 5.5em;
+    height: 15em;
+    top: -30px;
+}
+
+@keyframes cambiaColor {
+    0% {
+        color: rgb(255, 231, 122); /* Color inicial */
+    }
+    25% {
+        color: rgb(255, 224, 88);
+    }
+    50% { 
+        color: rgb(202, 168, 16);
+    }
+    75% {
+        color: rgb(194, 126, 1);
+    }
+    100% {
+        color: rgb(236, 106, 0); /* Regresa al color inicial */
+    }
+}
+
+/* ----------------------------------------------------- */
+
 
 .fuente h1{
     margin-top: 1px;
@@ -56,24 +128,32 @@ header{
     top: 1em;
     left: 50%; /* truquito para centrar objetos con position relative PARTE 1 */
     transform: translateX(-50%);
+    width: 40em; /*para que no sea tan largo y no superponga con la imagen de inicio de sesión */
 }.search{
+    font-size: 22px;
     width: 550px;
     height: 55px;
     border-radius: 50px;
-}.contSpeedwagon{
-    width: 150px; 
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden; /*Recorta-Esconde lo que sobra*/
-    position: absolute;
-    right: 1em;
-    top: 1em;
-  }.tpose-image{
-    object-fit: cover; /*Rellena el contenedor con la imagen*/
-    /*Una vez la imagen está dentro del círculo, se asegura que no sobresalga nada, definiendo que rellene 100% del círculo*/
-    width: 100%;
-    height: 100%;
-  }
+}
+
+/* T pose e inicio de sesión-------------------- */
+
+    .contSpeedwagon{
+        width: 150px; 
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden; /*Recorta-Esconde lo que sobra*/
+        position: absolute;
+        right: 1.2em;
+        top: 1.5em;
+    }.tpose-image{
+        object-fit: cover; /*Rellena el contenedor con la imagen*/
+        /*Una vez la imagen está dentro del círculo, se asegura que no sobresalga nada, definiendo que rellene 100% del círculo*/
+        width: 100%;
+        height: 100%;
+    }
+
+/* ------------------------------- */
 
 nav{
     background-color: #1f4068;
@@ -115,7 +195,6 @@ nav{
 }
 
 /* estrella de calificación de los productos ---------------- */
-
 .bx-star{
     font-size: 35px;
     position: absolute;
@@ -123,7 +202,6 @@ nav{
     top: 0.3em;
     color: violet;
 }
-
 /* --------------------------------------------------------- */
 
 /* grilla productos ---------------------------------------- */
@@ -177,6 +255,7 @@ nav{
             background-color: #040A35;
             border: 10px;
         }.grillaproductos .product-frame .product-caract .product-price{
+
             margin-top: 0.5em;
             margin-bottom: -0.1em;
             height: 40px;

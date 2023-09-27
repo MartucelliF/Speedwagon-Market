@@ -2,8 +2,10 @@ C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\p
 C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\persistencia\exceptions\IllegalOrphanException.java
 C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\persistencia\UsuarioJpaController.java
 C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\persistencia\exceptions\PreexistingEntityException.java
-C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\com\fundacionspeedwagon\fundacionspeedwagon\Sevlets\SvUsuario.java
+C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\com\iniciosesion\iniciosesion\Sevlets\SvProductos.java
+C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\persistencia\ProductoJpaController.java
 C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\logica\Controladora.java
 C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\logica\Usuario.java
+C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\logica\Producto.java
 C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\com\iniciosesion\iniciosesion\Sevlets\SvUsuarios.java
 C:\Users\Franchotito\Documents\NetBeansProjects\SpeedwagonMarket\src\main\java\persistencia\exceptions\NonexistentEntityException.java
